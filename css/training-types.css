@@ -1,0 +1,67 @@
+.training-types {
+    max-width: 1920px;
+    margin-inline: auto;
+    padding-block: 70px 120px;
+    /* убрать наслоение картинки */
+    position: relative;
+    background-color: var(--color-black);
+}
+
+.training-types-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 60px;
+}
+
+.training-types-item {
+    --trainingTypesArrowSize: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+    padding-top: var(--trainingTypesArrowSize);
+    background: url(../images/transparent-arrow.svg) 100% 0/var(--trainingTypesArrowSize) no-repeat;
+}
+
+.training-types-img {
+    height: 142px;
+    width: auto;
+}
+
+.training-types-item-title {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.8px;
+}
+
+@media (max-width: 1440px) {
+    .training-types-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .training-types-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .training-types-img {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .training-types {
+        padding-block: 40px 40px;
+    }
+    .training-types-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .training-types-item {
+        row-gap: 20px;
+    }
+}
+

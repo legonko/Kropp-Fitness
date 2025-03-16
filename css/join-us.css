@@ -1,0 +1,131 @@
+.join-us {
+    background-color: var(--color-dark);
+}
+
+.join-us-video-wrapper {
+    background: url("../images/join-us/join-us-bg.jpg") center/cover no-repeat var(--color-dark);
+    padding: 150px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.join-us-video {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* for centering */
+    translate: -50% -50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(100px, 10.41vw, 200px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: transparent;
+    border: var(--border);
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-size: 14px;
+    
+}
+
+.play-button::after {
+    content: "";
+    width: 26px;
+    aspect-ratio: 1;
+    background: url("../images/arrow.svg") center/80% no-repeat;
+    transition-duration: var(--transition-duration);
+}
+
+.play-button:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.play-button:hover::after {
+    filter: invert(1);
+}
+
+.join-us-body {
+    padding-bottom: 150px;
+}
+
+.join-us-title {
+    font-size: clamp(64px, 9.375vw, 180px);
+    line-height: 1;
+    text-align: center;
+    margin-top: -0.4em;
+    position: relative;
+    margin-bottom: 134px;
+}
+
+.join-us-title::after {
+    content: "";
+    background: url("../images/filled-arrow-right.svg") center/contain no-repeat;
+    height: 0.7em;
+    aspect-ratio: 1;
+    display: inline-block;
+    margin-left: 0.15em;
+}
+
+.join-us-form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 52px;
+    gap: 7px;
+}
+
+
+.join-us-form-subtitle {    
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.65;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.join-us-form-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.join-us-form-input {
+    max-width: 400px;
+}
+
+
+@media (max-width: 1024px) {
+    .join-us-body {
+        padding-bottom: 80px;
+    }
+    .join-us-title {
+        margin-bottom: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .join-us-title {
+        margin-bottom: 60px;
+    }
+    .join-us-form-subtitle {
+        font-size: 16px;
+    }
+    .join-us-form-body {
+        flex-direction: column;
+        
+    }
+}
+
+
