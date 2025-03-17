@@ -1,13 +1,14 @@
 .location {
     display: grid;
-    max-width: 1920px;
+    /* max-width: 1920px; */
     margin-inline: auto;
     grid-template-columns: repeat(2, 1fr);
+    min-height: 600px;
 }
 
 .location-map {
     width: 100%;
-    max-width: 960px;
+    /* max-width: 960px; */
 }
 
 .location-body {

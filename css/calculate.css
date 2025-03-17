@@ -1,0 +1,138 @@
+.calculate {
+    background-color: var(--color-dark);
+    padding-block: 142px 150px;
+    padding-inline: 32px;
+}
+
+.calculate-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 36px;
+}
+
+.calculate-body {
+    max-width: 630px;
+    flex-grow: 1;
+}
+
+.calculate-form-title {
+    margin-bottom: 16px;
+}
+
+.calculate-form-description {
+    margin-bottom: 32px;
+    max-width: 385px;
+}
+
+.calculate-form-body {
+    margin-bottom: 26px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 30px;
+
+}
+
+.calculate-form-select.wide {
+    grid-column: -1 / 1;
+}
+
+.calculate-form-input,
+.calculate-form-select:not(.calculate-form-select.wide) {
+    max-width:300px;
+}
+
+.calculate-table-wrapper {
+    background-color: var(--color-black);
+    max-width: 610px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculate-table {
+    border-collapse: collapse;
+}
+
+.calculate-table th {
+    padding-block: 20px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.calculate-table td {
+    color: var(--color-light-gray);
+    padding-block: 14px;
+}
+
+.calculate-table :is(td, th) {
+    padding-right: 30px;
+}
+
+.calculate-table :is(td, th):not(:first-child) {
+    padding-left: 30px;
+}
+
+.calculate-table tfoot td {
+    color: var(--color-white);
+    padding-top: 30px;
+    padding-bottom: 0;
+}
+
+.calculate-table :is(td, th):not(:last-child) {
+    border-right: var(--border-input);
+    
+}
+
+.calculate-table tbody td {
+    border-top: var(--border-input);
+}
+
+@media (max-width: 1024px) {
+    .calculate {
+        padding-block: 100px;
+    }
+    .calculate-wrapper {
+        column-gap: 16px;
+    }
+    .calculate-form-body {
+        grid-template-columns: 1fr;
+    }
+    .calculate-table th, td {
+        padding-block: 4px;
+    }
+    .calculate-table :is(td, th) {
+        padding-right: 4px;
+        padding-block: 10px;
+    }
+    
+    .calculate-table :is(td, th):not(:first-child) {
+        padding-left: 20px;
+    }
+    
+    .calculate-table tfoot td {
+        padding-top: 8px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .calculate {
+        padding-block: 60px;
+    }
+    .calculate-wrapper {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .calculate-form-input,
+    .calculate-form-select:not(.calculate-form-select.wide) {
+        max-width: 100%;
+    }
+    .calculate-table-wrapper {
+        background-color: var(--color-dark);
+        max-width: 400px;
+    }
+
+}

@@ -3,7 +3,7 @@
 }
 
 .join-us-video-wrapper {
-    background: url("../images/join-us/join-us-bg.jpg") center/cover no-repeat var(--color-dark);
+    background: url("../images/join-us/join-us-bg.png") center/cover no-repeat var(--color-dark);
     padding: 150px 30px;
     display: flex;
     align-items: center;
@@ -82,15 +82,6 @@
     align-items: center;
     margin-bottom: 52px;
     gap: 7px;
-}
-
-
-.join-us-form-subtitle {    
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 1.65;
-    text-transform: uppercase;
-    text-align: center;
 }
 
 .join-us-form-body {
